@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import OrderNameInput from './OrderNameInput';
+
 
 function App() {
+
+  const [orderName, setOrderName] = useState('Kat');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div>
+        <h2>Order for {orderName}</h2>
+      </div>
+      <div className='order-form'>
+        <OrderNameInput setOrderName={setOrderName} />
+
+      </div>
     </div>
   );
 }
