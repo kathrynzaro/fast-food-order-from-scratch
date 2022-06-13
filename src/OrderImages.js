@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function OrderImages() {
+export default function OrderImages({ foodId }) {
   return (
-    <div>OrderImages</div>
-  )
+    <div className='order-images'>
+      <img src={`food-${foodId}.png`} />
+    </div>
+  );
 }
