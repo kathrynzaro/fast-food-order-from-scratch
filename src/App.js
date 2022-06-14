@@ -20,7 +20,6 @@ function App() {
 
   return (
     <div className="App">
-
       <div>
         <h2>Order for {orderName}</h2>
         <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />

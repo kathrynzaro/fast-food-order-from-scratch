@@ -1,7 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Bangers&family=Chicle&family=Comfortaa:wght@300&family=Creepster&family=Great+Vibes&family=Griffy&family=IM+Fell+French+Canon&family=IM+Fell+French+Canon+SC&family=Inconsolata:wght@200&family=Irish+Grover&family=Josefin+Sans&family=Karla&family=Limelight&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@400;700&family=Nixie+One&family=Oswald&family=Philosopher:wght@400;700&family=Poiret+One&family=Press+Start+2P&family=Raleway:wght@100&family=Roboto+Mono:wght@100&family=Slabo+27px&family=Space+Mono&family=Spectral&family=Tenor+Sans&family=Ultra&family=Unica+One&family=VT323&family=Varela+Round&family=Yeseva+One&display=swap');
+
+body {
+  background-color: black;
+}
+
 .App {
   text-align: center;
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3.2rem;
+  letter-spacing: 7px;
+  color: turquoise;
+  border: 3px solid hotpink;
+  border-radius: 15px;
+  padding: 10px;
+  /* width: 200px; */
 }
 
 img {
-  width: 250px;
+  width: 175px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  border: 5px solid turquoise;
+  padding: 40px;
+  border-radius: 20px;
+  font-size: 2rem;
+  margin: 50px;
+}
+
+button, input, select {
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 3px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+  border: 3px solid rgb(46, 46, 146);
+  border-radius: 5px;
+  color: hotpink;
+}
+
+select {
+  width: 120px;
+}
+
+.name-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
