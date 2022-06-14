@@ -5,6 +5,8 @@ import FoodDropdown from './FoodDropdown';
 import SideItemDropdown from './SideItemDropdown';
 import DrinkDropdown from './DrinkDropdown';
 import OrderImages from './OrderImages';
+import InstructionsForm from './InstructionsForm';
+import InstructionsList from './InstructionsList';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
   const [sideId, setSideId] = useState(1);
   const [drinkId, setDrinkId] = useState(1);
   const [orderName, setOrderName] = useState('Kat');
+  const [instructions, setInstructions] = useState(['extra cheese', 'add pineapple']);
+
 
   return (
     <div className="App">
@@ -26,6 +30,8 @@ function App() {
         <FoodDropdown setFoodId={setFoodId} />
         <SideItemDropdown setSideId={setSideId} />
         <DrinkDropdown setDrinkId={setDrinkId} />
+        <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
+        <InstructionsList instructions={instructions} />
       </div>
     </div>
   );
