@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Space Age Diner <img src='/cyborg-planet-1.png' /></h1>
+      <h1>Space Age Diner <img className='logo' src='/cyborg-planet-1.png' /></h1>
       <div className='order-display'>
         <h2>Order for {orderName}</h2>
         <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
