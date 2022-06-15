@@ -46,15 +46,23 @@ h1 {
   background-color: var(--midnight-blue-3);
   width: 175px;
   letter-spacing: 2px;
+  transition: transform 1.5s ease-in-out;
 }
 
 h1:hover {
-  opacity: .5;
+  transform: rotateY(360deg);
+  /* opacity: .5; */
+}
+
+img:hover {
+  /* opacity: .5; */
+  transform: rotateY(360deg);
 }
 
 img {
   width: 60px;
   margin-left: 10px;
+  transition: transform 1.5s ease-in-out;
 }
 
 .order-display {
