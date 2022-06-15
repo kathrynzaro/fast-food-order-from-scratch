@@ -13,20 +13,20 @@ export default function MyDropdowns({ setDrinkId, setFoodId, setSideId }) {
           { value: '3', displayText: 'Cosmic Hotdog' },
         ]} />
       <CustomDropdown
-        label='Drink?'
-        setItem={setDrinkId}
-        options={[
-          { value: '1', displayText: 'Cosmic Coffee' },
-          { value: '2', displayText: 'Cosmic Soda' },
-          { value: '3', displayText: 'Cosmic Cocktail' },
-        ]} />
-      <CustomDropdown
         label='Side?'
         setItem={setSideId}
         options={[
           { value: '1', displayText: 'Cosmic Fries' },
           { value: '2', displayText: 'Cosmic Ice Cream' },
           { value: '3', displayText: 'Cosmic Popcorn' },
+        ]} />
+      <CustomDropdown
+        label='Drink?'
+        setItem={setDrinkId}
+        options={[
+          { value: '1', displayText: 'Cosmic Coffee' },
+          { value: '2', displayText: 'Cosmic Soda' },
+          { value: '3', displayText: 'Cosmic Cocktail' },
         ]} />
 
     </div>
