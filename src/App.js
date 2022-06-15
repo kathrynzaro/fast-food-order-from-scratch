@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 import OrderNameInput from './OrderNameInput';
-import FoodDropdown from './FoodDropdown';
-import SideItemDropdown from './SideItemDropdown';
-import DrinkDropdown from './DrinkDropdown';
+// import FoodDropdown from './FoodDropdown';
+// import SideItemDropdown from './SideItemDropdown';
+// import DrinkDropdown from './DrinkDropdown';
 import OrderImages from './OrderImages';
 import InstructionsForm from './InstructionsForm';
 import InstructionsList from './InstructionsList';
+import MyDropdowns from './MyDropdowns';
 
 
 function App() {
@@ -20,15 +21,17 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <h1>Space Age Diner <img src='/cyborg-planet-1.png' /></h1>
+      <div className='order-display'>
         <h2>Order for {orderName}</h2>
         <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
       </div>
       <div className='order-form'>
         <OrderNameInput setOrderName={setOrderName} />
-        <FoodDropdown setFoodId={setFoodId} />
+        {/* <FoodDropdown setFoodId={setFoodId} />
         <SideItemDropdown setSideId={setSideId} />
-        <DrinkDropdown setDrinkId={setDrinkId} />
+        <DrinkDropdown setDrinkId={setDrinkId} /> */}
+        <MyDropdowns setDrinkId={setDrinkId} setFoodId={setFoodId} setSideId={setSideId} />
         <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
         <InstructionsList instructions={instructions} />
       </div>

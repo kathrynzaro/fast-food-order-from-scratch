@@ -1,73 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Bangers&family=Chicle&family=Comfortaa:wght@300&family=Creepster&family=Great+Vibes&family=Griffy&family=IM+Fell+French+Canon&family=IM+Fell+French+Canon+SC&family=Inconsolata:wght@200&family=Irish+Grover&family=Josefin+Sans&family=Karla&family=Limelight&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@400;700&family=Nixie+One&family=Oswald&family=Philosopher:wght@400;700&family=Poiret+One&family=Press+Start+2P&family=Raleway:wght@100&family=Roboto+Mono:wght@100&family=Slabo+27px&family=Space+Mono&family=Spectral&family=Tenor+Sans&family=Ultra&family=Unica+One&family=VT323&family=Varela+Round&family=Yeseva+One&display=swap');
 
+
 body {
-  background-color: black;
+  /* CSS HEX */
+  --royal-blue-dark: #152567ff;
+  --midnight-blue: #000055ff;
+  --midnight-blue-2: rgb(0, 0, 20);
+  --midnight-blue-3: rgb(0, 0, 160);
+  --sea-green-crayola: #14e9bcff;
+  --snow: #fefbfdff;
+  --french-fuchsia: #ff2e93ff;
+  --medium-aquamarine: #00e5b2ff;
+}
+
+body {
+  background-color: var(--midnight-blue-2);
 }
 
 .App {
   text-align: center;
   font-family: 'VT323', monospace;
   text-transform: uppercase;
-  color: white;
-  height: 100vh;
+  color: var(--snow);
+  height: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-h2 {
-  font-size: 3.2rem;
-  letter-spacing: 7px;
-  color: turquoise;
-  border: 3px solid hotpink;
-  border-radius: 15px;
-  padding: 10px;
-  /* width: 200px; */
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: var(--french-fuchsia);
+  /* border: 3px solid var(--sea-green-crayola); */
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--midnight-blue-3);
+  width: 175px;
+  letter-spacing: 2px;
+}
+
+h1:hover {
+  opacity: .5;
 }
 
 img {
-  width: 175px;
-  padding: 10px;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.order-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px 20px 150px;
+  max-width: 500px;
+}
+
+h2 {
+  font-size: 2.7rem;
+  letter-spacing: 5px;
+  color: var(--sea-green-crayola);
+  border: 3px solid var(--french-fuchsia);
+  border-radius: 15px;
+  padding: 15px;
+  width: fit-content;
+  max-width: 300px;
+  margin: 50px 0;
+}
+
+.order-images {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order-display img {
+  padding: 15px;
+  margin: 10px;
+  border: 5px solid var(--midnight-blue-3);
+  border-radius: 20px;
+}
+
+.food {
+  width: 200px;
+}
+
+.side {
+  width: 130px;
+}
+
+.drink-1 {
+  width: 190px;
+}
+
+.drink-2 {
+  width: 110px;
+}
+
+.drink-3 {
+  width: 170px;
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: square;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
 }
 
 .order-form {
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  align-items: center;
-  border: 5px solid turquoise;
-  padding: 40px;
+  width: 300px;
+  align-items: flex-start;
+  border: 5px solid var(--medium-aquamarine);
+  padding: 20px;
   border-radius: 20px;
   font-size: 2rem;
-  margin: 50px;
+  margin: 100px 20px 150px;
+  text-align: start;
 }
 
-button, input, select {
+select {
   font-family: 'VT323', monospace;
   text-transform: uppercase;
   font-size: 2rem;
   padding: 3px;
-  margin: 5px;
-  background-color: black;
-  color: white;
-  border: 3px solid rgb(46, 46, 146);
+  margin: 7px 0px;
+  background-color: var(--midnight-blue);
+  border: 3px solid var(--royal-blue-dark);
   border-radius: 5px;
-  color: hotpink;
+  color: var(--french-fuchsia);
+  width: 100%;
+}
+select:hover {
+  cursor: pointer;
 }
 
-select {
-  width: 120px;
+input {
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 3px;
+  margin: 7px 0px;
+  background-color: black;
+  border: 3px solid var(--royal-blue-dark);
+  border-radius: 5px;
+  color: var(--french-fuchsia);
+}
+
+button {
+  background-color: var(--midnight-blue);
+  border: 3px solid var(--royal-blue-dark);
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 3px;
+  margin: 5px 0px;
+  color: var(--french-fuchsia);
 }
 
 .name-input {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 button:hover {
@@ -78,4 +186,5 @@ button:hover {
 form {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
